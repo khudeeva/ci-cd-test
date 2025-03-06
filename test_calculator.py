@@ -15,5 +15,19 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(divide(10, 2), 5)
         self.assertEqual(divide(10, 0), "Ошибка: деление на ноль")
 
+    def test_large_numbers(self):
+        self.assertEqual(add(1000000000, 2000000000), 3000000000)
+        self.assertEqual(multiply(100000, 1000), 100000000)
+
+    def test_divide_negative(self):
+        self.assertEqual(divide(-10, 2), -5)
+        self.assertEqual(divide(10, -2), -5)
+        self.assertEqual(divide(-10, -2), 5)
+
+    def test_zero_operations(self):
+        self.assertEqual(add(0, 10), 10)
+        self.assertEqual(subtract(0, 10), -10)
+        self.assertEqual(multiply(0, 100), 0)
+
 if __name__ == '__main__':
     unittest.main()
