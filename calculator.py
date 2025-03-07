@@ -72,3 +72,8 @@ def number_max(lst):
      return "Ошибка: пустой список"
 
     return max(lst)
+
+def text_upper(text):
+     if not isinstance(text, str):
+       return "Ошибка: не строка"
+     return text.upper()
