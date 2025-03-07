@@ -63,3 +63,12 @@ def return_modul(number):
     if not isinstance(number, (int, float)):
      return "Ошибка: не число"
     return abs(number)
+
+def number_max(lst):
+    if not isinstance(lst, list):
+     return "Ошибка: не список"
+  
+    if not lst:
+     return "Ошибка: пустой список"
+
+    return max(lst)
