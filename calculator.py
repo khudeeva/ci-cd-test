@@ -54,3 +54,8 @@ def remove_spaces(text):
      return "Ошибка: не строка"
     return "".join(text.splite())
 
+def text_lower(text):
+    if not isinstance (text, str):
+     return "Ошибка: не строка"
+    return text.lower()
+
