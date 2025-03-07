@@ -49,3 +49,8 @@ def sort_list(lst):
      return "Ошибка: не список"
     return sorted(lst)
 
+def remove_spaces(text):
+    if not isinstance(text, str):
+     return "Ошибка: не строка"
+    return "".join(text.splite())
+

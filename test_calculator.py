@@ -1,7 +1,7 @@
 import unittest
 import os
 import json
-from calculator import add, subtract, multiply, divide, power, capitalize_word, remove_duplicates, save_list_to_csv, save_json, load_json, sort_list
+from calculator import add, subtract, multiply, divide, power, capitalize_word, remove_duplicates, save_list_to_csv, save_json, load_json, sort_list, remove_spaces
 
 class TestCalculator(unittest.TestCase):
     def test_add(self):
@@ -78,6 +78,15 @@ def test_sort_list(self):
     self.assertEqual(sort_list([5]), [5])
     self.assertEqual(sort_list([]), [])
     self.assertEqual(sort_list("hello"), "Ошибка: не список")
+
+def test_remove_spaces(self):
+    self.assertEqual(remove_spaces("   Hello   world   "), "Hello world")
+    self.assertEqual(remove_spaces("Python    is    great"), "Python is great")
+    self.assertEqual(remove_spaces("   OnlyStartSpaces"), "OnlyStartSpaces")
+    self.assertEqual(remove_spaces("NoSpaces"), "NoSpaces")
+    self.assertEqual(remove_spaces("   "), "")
+    self.assertEqual(remove_spaces("123"), "Ошибка: не строка")
+
 
 if __name__ == '__main__':
     unittest.main()
