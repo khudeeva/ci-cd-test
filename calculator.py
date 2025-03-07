@@ -59,3 +59,7 @@ def text_lower(text):
      return "Ошибка: не строка"
     return text.lower()
 
+def return_modul(number):
+    if not isinstance(number, (int, float)):
+     return "Ошибка: не число"
+    return abs(number)
