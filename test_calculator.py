@@ -1,7 +1,7 @@
 import unittest
 import os
 import json
-from calculator import add, subtract, multiply, divide, power, capitalize_word, remove_duplicates, save_list_to_csv, save_json, load_json
+from calculator import add, subtract, multiply, divide, power, capitalize_word, remove_duplicates, save_list_to_csv, save_json, load_json, sort_list
 
 class TestCalculator(unittest.TestCase):
     def test_add(self):
@@ -72,6 +72,12 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(result, test_data)
 
         os.remove(filename)
+def test_sort_list(self):
+    self.assertEqual(sort_list([3, 2, 1]), [1, 2, 3])
+    self.assertEqual(sort_list(["banana", "apple", "cherry"]), ["apple", "banana", "cherry"])
+    self.assertEqual(sort_list([5]), [5])
+    self.assertEqual(sort_list([]), [])
+    self.assertEqual(sort_list("hello"), "Ошибка: не список")
 
 if __name__ == '__main__':
     unittest.main()

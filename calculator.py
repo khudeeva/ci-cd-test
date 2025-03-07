@@ -44,3 +44,8 @@ def load_json(filename):
     with open(filename, "r") as file:
         return json.load(file)
 
+def sort_list(lst):
+    if not isinstance(lst, list):
+     return "Ошибка: не список"
+    return sorted(lst)
+
