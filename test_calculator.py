@@ -1,7 +1,7 @@
 import unittest
 import os
 import json
-from calculator import add, subtract, multiply, divide, power, capitalize_word, remove_duplicates, save_list_to_csv, save_json, load_json, sort_list, remove_spaces, text_lower, return_modul, number_max, text_upper
+from calculator import add, subtract, multiply, divide, power, capitalize_word, remove_duplicates, save_list_to_csv, save_json, load_json, sort_list, remove_spaces, text_lower, return_modul, number_max, text_upper, min_number
 
 class TestCalculator(unittest.TestCase):
     def test_add(self):
@@ -118,6 +118,13 @@ def test_text_upper(self):
     self. assertEqual(text_upper("Hello"), "HELLO")
     self. assertEqual(text_upper(""), "")
     self. assertEqual(text_upper(123), "Ошибка: не строка")
+
+def test_min_number(self):
+    self.assertEqual(min_number([1, 2, 3]), 1)
+    self.assertEqual(min_number([-1, -2, -3]), -3)
+    self.assertEqual(min_number([1, 1, 1]), 1)
+    self.assertEqual(min_number([]), "Ошибка: пустой список")
+    self.assertEqual(min_number("123"), "Ошибка: не список")
 
 if __name__ == '__main__':
     unittest.main()

@@ -77,3 +77,11 @@ def text_upper(text):
      if not isinstance(text, str):
        return "Ошибка: не строка"
      return text.upper()
+
+def min_number(lst):
+    if not isinstance(lst, list):
+     return "Ошибка: не список"
+
+    if not lst:
+     return "Ошибка: пустой список"
+    return min(lst)
