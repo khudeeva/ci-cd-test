@@ -53,7 +53,7 @@ def sort_list(lst):
 def remove_spaces(text):
     if not isinstance(text, str):
         return "Ошибка: не строка"
-    return "".join(text.split())
+    return " ".join(text.split())
 
 def text_lower(text):
     if not isinstance(text, str):
@@ -93,5 +93,5 @@ def add_element(lst):
     if not isinstance(lst, list):
         return "Ошибка: не список"
     
-    list.append("новый элемент")
+    lst.append("новый элемент")
     return lst
